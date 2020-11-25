@@ -109,7 +109,7 @@ func saveJobToMySQL(jobString string) {
 	}
 	in.Exec(s[0],s[1])
 	fmt.Printf("data %s: %s\n", s[0],s[1])
-	//Insert job into MongoDB
+	
 	
 
 	fmt.Printf("Saved to Mysql : %s", jobString)
