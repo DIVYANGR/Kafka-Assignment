@@ -76,7 +76,7 @@ func main() {
 					ctx.JSON(http.StatusOK, gin.H{
 						"result1": fmt.Sprint(job),
 					})
-					saveJobToMongo(job)
+					saveJobToMySQL(job)
 				} else {
 					fmt.Printf("Consumer error: %v (%v)\n", err, msg)
 					break
@@ -97,7 +97,7 @@ func main() {
 }
 
 
-func saveJobToMongo(jobString string) {
+func saveJobToMySQL(jobString string) {
 
 	fmt.Println("Save to MySQL")
 	db := dbConn()
